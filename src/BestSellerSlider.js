@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
+import ImageCard from './ImageCard';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -32,56 +33,21 @@ export default class BestSellerSlider extends Component {
   constructor(props){
     super(props);
     const listOfImg = [
-      {id:best1,name:'Gingham Blouse With Ruffles',price:'IDR 225.000'},
-      {id:best2,name:'Stripe Cold Shoulder Jumpsuit',price:'IDR 355.000'},
-      {id:best3,name:'Tropical Flute Sleeve Bardot Playsuit',price:'IDR 300.000'},
-      {id:best4,name:'Floral Wrap Frill Playsuit',price:'IDR 325.000'},
-      {id:best5,name:'Daisy Wrap Playsuit',price:'IDR 315.000'},
-      {id:best6,name:'Checked Bardot Playsuit',price:'IDR 335.000'},
-      {id:best7,name:'Printed Crop Shirt',price:'IDR 215.000'},
-      {id:best8,name:'Floral Horn Top',price:'IDR 275.000'},
-      {id:best9,name:'Your Basic Camisole Top',price:'IDR 195.000'},
-      {id:best10,name:'Printed Bell Sleeve Outer',price:'IDR 275.000'},
+      {id:best1,idHover: best11,name:'Gingham Blouse With Ruffles',price:'IDR 225.000'},
+      {id:best2,idHover: best12,name:'Stripe Cold Shoulder Jumpsuit',price:'IDR 355.000'},
+      {id:best3,idHover: best13,name:'Tropical Flute Sleeve Bardot Playsuit',price:'IDR 300.000'},
+      {id:best4,idHover: best14,name:'Floral Wrap Frill Playsuit',price:'IDR 325.000'},
+      {id:best5,idHover: best15,name:'Daisy Wrap Playsuit',price:'IDR 315.000'},
+      {id:best6,idHover: best16,name:'Checked Bardot Playsuit',price:'IDR 335.000'},
+      {id:best7,idHover: best17,name:'Printed Crop Shirt',price:'IDR 215.000'},
+      {id:best8,idHover: best18,name:'Floral Horn Top',price:'IDR 275.000'},
+      {id:best9,idHover: best19,name:'Your Basic Camisole Top',price:'IDR 195.000'},
+      {id:best10,idHover: best20,name:'Printed Bell Sleeve Outer',price:'IDR 275.000'},
     ];
     
     this.state = {listOfImg};
-    this.onMouseOver = this.onMouseOver.bind(this); 
-    this.onMouseOut = this.onMouseOut.bind(this);
   }
 
-  onMouseOver(){    
-     const listOfImgHover = [
-      {id:best11,name:'Gingham Blouse With Ruffles',price:'IDR 225.000'},
-      {id:best12,name:'Stripe Cold Shoulder Jumpsuit',price:'IDR 355.000'},
-      {id:best13,name:'Tropical Flute Sleeve Bardot Playsuit',price:'IDR 300.000'},
-      {id:best14,name:'Floral Wrap Frill Playsuit',price:'IDR 325.000'},
-      {id:best15,name:'Daisy Wrap Playsuit',price:'IDR 315.000'},
-      {id:best16,name:'Checked Bardot Playsuit',price:'IDR 335.000'},
-      {id:best17,name:'Printed Crop Shirt',price:'IDR 215.000'},
-      {id:best18,name:'Floral Horn Top',price:'IDR 275.000'},
-      {id:best19,name:'Your Basic Camisole Top',price:'IDR 195.000'},
-      {id:best20,name:'Printed Bell Sleeve Outer',price:'IDR 275.000'},
-    ];
-    
-    this.setState({listOfImg:listOfImgHover});
-  }
-
-
-  onMouseOut(){
-    const listOfImg = [
-      {id:best1,name:'Gingham Blouse With Ruffles',price:'IDR 225.000'},
-      {id:best2,name:'Stripe Cold Shoulder Jumpsuit',price:'IDR 355.000'},
-      {id:best3,name:'Tropical Flute Sleeve Bardot Playsuit',price:'IDR 300.000'},
-      {id:best4,name:'Floral Wrap Frill Playsuit',price:'IDR 325.000'},
-      {id:best5,name:'Daisy Wrap Playsuit',price:'IDR 315.000'},
-      {id:best6,name:'Checked Bardot Playsuit',price:'IDR 335.000'},
-      {id:best7,name:'Printed Crop Shirt',price:'IDR 215.000'},
-      {id:best8,name:'Floral Horn Top',price:'IDR 275.000'},
-      {id:best9,name:'Your Basic Camisole Top',price:'IDR 195.000'},
-      {id:best10,name:'Printed Bell Sleeve Outer',price:'IDR 275.000'},
-    ];
-    this.setState({listOfImg: listOfImg});
-  }
   render() {
     const settings = {
         dots : true,
@@ -95,9 +61,7 @@ export default class BestSellerSlider extends Component {
         <Slider {...settings}>
             {this.state.listOfImg.map(item =>{return(
               <div>
-                <img src={item.id}
-                    onMouseOver={this.onMouseOver.bind(this)} 
-                    onMouseOut={this.onMouseOut.bind(this)}/>
+                <ImageCard img={item.id} imgHover={item.idHover}/>
                 <h5 id="name">{item.name}</h5>
                 <h5 id="price"><b>{item.price}</b></h5> 
               </div>);})

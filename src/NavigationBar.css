@@ -2,9 +2,14 @@
     color: pink;
 }
 
-.navbar{
-    line-height: 100px;
-}
+.navbar-brand {
+    padding: 0;
+  }
+  .navbar-brand>img {
+    height: 100%;
+    width: auto;
+  }
+
 
 .navbar-default{
     background: white;
@@ -18,9 +23,5 @@
     margin-bottom: 0;
 }
 
-.navbar-brand>img {
-margin: 0;
-padding: 0;
-}
 
   

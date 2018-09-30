@@ -36,34 +36,48 @@
  }
 
  .col-md-4{
-   width: 33.333%;
-   float: left;
+   float: center;
+   padding: 0;
+   padding-bottom: 20px;
  }
 
  .col-md-4 img{
-  width: 100%;
+  width: 80%;
   height: auto;
   padding: 10px;
 }
+
+.col-md-6{
+  float:center;
+  padding: 0;
+  padding-bottom: 20px;
+}
+
+.col-md-6 img{
+ width: 80%;
+ height: auto;
+ padding: 10px;
+}
    
- @media (min-width: 992px) {
+ @media (min-width: 992px) and(max-width: 1200px) {
   .col-md-4 {
     width:33.333%;
   }
 }
 
-@media (min-width: 768px) {
-  .col-md-6  {
-    width:100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-md-4 {
-      width: 33.33%;
+@media (max-width: 768px) {
+  .col-md-6 {
+      width: 50%;
   }
 }
 
 .pagination{
   float: right;
+  padding-right: 50px;
+}
+
+.col-md-4 #name, #price{
+  font-family: 'Trebuchet MS';
+  text-align: center;
+  width: 80%;
 }

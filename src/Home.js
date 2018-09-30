@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import './NavigationBar';
-import NavigationBar from './NavigationBar';
 import './Home.css';
 import banner from './images/banner/Top-Banner-26June.jpg';
 import BannerCarousel from './BannerCarousel';
@@ -14,7 +12,6 @@ export default class Home extends Component {
       return (  
         <div>
           <div className="container">
-             <div ><NavigationBar/></div>
              <div className="content-top">
                 <div className="banner">
                     <p><img src={banner} alt="banner" width="1360" height="70" /></p>

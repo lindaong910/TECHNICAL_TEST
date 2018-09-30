@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import Pagination from "react-js-pagination";
 
-function importAll(r) {
-  return r.keys().map(r);
-}
-
-const images = importAll(require.context('./images/browse', false, /\.(jpg)$/));
-
 export default class BrowsePagination extends React.Component {
   constructor(props) {
     super(props);
@@ -15,9 +9,11 @@ export default class BrowsePagination extends React.Component {
     };
   }
  
-  handlePageChange(pageNumber) {
+  handlePageChange = pageNumber => {
     console.log('active page is ${pageNumber}');
-    this.setState({activePage: pageNumber});
+    this.setState({
+      activePage: pageNumber,
+    });
   }
  
   render() {
