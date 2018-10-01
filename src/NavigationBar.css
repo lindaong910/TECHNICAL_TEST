@@ -1,4 +1,4 @@
-#btn-home:hover, #btn-browse:hover{
+#btn-home:hover, #btn-browse:hover, #btn-about-us:hover{
     color: pink;
 }
 
@@ -9,7 +9,6 @@
     height: 100%;
     width: auto;
   }
-
 
 .navbar-default{
     background: white;

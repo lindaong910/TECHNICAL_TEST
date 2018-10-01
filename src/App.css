@@ -27,3 +27,7 @@
   to { transform: rotate(360deg); }
 }
 
+.footer, .footer-copyright text-center py-3 {
+  background: rgb(255, 142, 160);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
