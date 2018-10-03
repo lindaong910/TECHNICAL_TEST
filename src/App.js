@@ -1,18 +1,22 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import ScrollUpButton from 'react-scroll-up-button';
 
 import NavigationBar from './NavigationBar';
 import Home from './Home';
 import Browse from './Browse';
 import AboutUs from './AboutUs';
-
 import './App.css';
+
+import imgPayment from './images/payment.jpg'
 
 class App extends React.Component {
   render() {
     return (
+     
       <BrowserRouter>
         <div>
+        <ScrollUpButton />
           <div className="header">
             <NavigationBar />
           </div>
@@ -22,15 +26,15 @@ class App extends React.Component {
             <Route exact path="/about-us" component={AboutUs} />
           </div>
           <footer class="footer-distributed">
-            <div class="footer-left">
+            <div class="footer-left" >
               <p class="footer-links">
-                <div>
+                <div style={{paddingBottom:"10px"}}>
                   <a href={`/home`}>Home</a>
                 </div>
-                <div>
+                <div style={{paddingBottom:"10px"}}>
                   <a href={`/browse`}>Browse</a>
                 </div>
-                <div>
+                <div style={{paddingBottom:"10px"}}>
                   <a href={`/about-us`}>About Us</a>
                 </div>
               </p>
@@ -54,6 +58,12 @@ class App extends React.Component {
                    <span> cs_springcollection@gmail.com</span>
                 </div>
               </div>
+              <div style={{paddingTop:"20px"}}>
+              <span>PAYMENT</span>
+              <div>                  
+                  <img src={imgPayment} style={{paddingBottom:"8px", width:"40%"}} />
+                </div>
+              </div>
             </div>
 
             <div class="footer-right">
@@ -67,9 +77,7 @@ class App extends React.Component {
               </p>
               <div class="footer-icons">
                 <a href="https://www.facebook.com">
-                  <i
-                    id="social-fb"
-                    class="fa fa-facebook-square fa-3x social"
+                  <i id="social-fb" class="fa fa-facebook-square fa-3x social"
                   />
                 </a>
                 <a href="https://youtube.com">
