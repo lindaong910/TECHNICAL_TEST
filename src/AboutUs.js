@@ -4,7 +4,7 @@ export default class AboutUs extends React.Component {
   render() {
     return (
       <div class="content">
-        <div class="container">
+        <div>
           <div class="page-div">
             <h3 class="text-center page-title-blank" style={{color:'rgb(255, 142, 160)'}}>ABOUT US</h3>
             <div class="row">

@@ -21,7 +21,7 @@ export default class ImageCard extends Component{
     render(){
         
         const src = this.state.isMouseOver ? this.props.imgHover : this.props.img;
-        return(<img src={src} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}/>
+        return(<img src={src} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut} alt=""/>
     );
     }
 }

@@ -8,7 +8,7 @@ import Browse from './Browse';
 import AboutUs from './AboutUs';
 import './App.css';
 
-import imgPayment from './images/payment.jpg'
+import imgPayment from './images/payment.png'
 
 class App extends React.Component {
   render() {
@@ -61,7 +61,7 @@ class App extends React.Component {
               <div style={{paddingTop:"20px"}}>
               <span>PAYMENT</span>
               <div>                  
-                  <img src={imgPayment} style={{paddingBottom:"8px", width:"40%"}} />
+                  <img src={imgPayment} style={{paddingBottom:"8px", width:"40%" }} alt="payment" />
                 </div>
               </div>
             </div>

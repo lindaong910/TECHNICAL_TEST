@@ -442,11 +442,13 @@ export default class Browse extends Component {
           <div>
             <NavigationBar />
           </div>
-          <div className="banner">
-            <p>
-              <img src={banner} alt="banner" width="1360" height="70" />
-            </p>
-          </div>
+        </div>
+        <div className="banner">
+          <p>
+            <img src={banner} alt="banner" width="1360" height="70" />
+          </p>
+        </div>
+        <div className="container">
           <h2 id="text-shop">COLLECTION</h2>
           <div className="container">
             {currentPageObj.map(item => {
@@ -455,23 +457,24 @@ export default class Browse extends Component {
                   <div className="col-md-4 col-md-6">
                     <ImageCard img={item.id} imgHover={item.idHover} />
                     <div id="name">{item.name}</div>
-                    <div id="price"><b>{item.price}</b></div>
+                    <div id="price">
+                      <b>{item.price}</b>
+                    </div>
                   </div>
                 </div>
               );
             })}
-             <div className="pagination">
-            <div>
-              <Pagination
-                activePage={this.state.activePage}
-                itemsCountPerPage={this.state.pages[0].length}
-                totalItemsCount={this.countItem()}
-                pageRangeDisplayed={3}
-                onChange={this.handlePageChange}
-              />
+            <div className="pagination">
+              <div>
+                <Pagination
+                  activePage={this.state.activePage}
+                  itemsCountPerPage={this.state.pages[0].length}
+                  totalItemsCount={this.countItem()}
+                  pageRangeDisplayed={3}
+                  onChange={this.handlePageChange}
+                />
+              </div>
             </div>
-          </div>
-         
           </div>
         </div>
       </div>

@@ -7,7 +7,14 @@
   }
   .navbar-brand>img {
     height: 100%;
-    width: auto;
+    width: 100%;
+  }
+
+  @media (min-width: 768px){
+    .navbar-right {
+        float: right!important;
+        margin-right: -150px;
+  }
   }
 
 .navbar-default{

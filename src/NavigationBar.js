@@ -9,7 +9,7 @@ export default class NavigationBar extends Component {
       <Navbar fixedTop className="navbar">
         <Navbar.Header>
           <Navbar.Brand>
-           <span> <img src={logo} alt="logo" width="50" height="50"/></span>Spring Collection
+           <span> <a href={`/home`}><img src={logo} alt="logo" width="150" height="50"/></a></span>
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>
